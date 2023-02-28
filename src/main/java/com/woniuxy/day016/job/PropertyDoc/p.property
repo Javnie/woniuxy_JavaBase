@@ -1,0 +1,17 @@
+userimpl=com.woniuxy.day016.job.dao.FileUserDAO
+
+user1.id=1
+user1.name=Tom
+user1.birthdate=1991/01/01
+
+user2.id=2
+user2.name=Jack
+user2.birthdate=1992/02/02
+
+user3.id=3
+user3.name=Ellen
+user3.birthdate=1993/03/03
+
+user4.id=4
+user4.name=Lisa
+user4.birthdate=1994/04/04
