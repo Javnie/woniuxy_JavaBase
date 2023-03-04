@@ -1,6 +1,7 @@
 package com.woniuxy.day022;
 /**
  * jdbc:mysql://18.162.120.240:3306/ + <database name>
+ *     my_sql1: 61.139.65.143:46750
  */
 
 import java.sql.*;
@@ -16,9 +17,8 @@ public class CentOSDemo {
 
         //注意端口号和database名称
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://18.162.120.240:3306/db01", "root", "123456");
-            PreparedStatement pstmt = connection.prepareStatement("INSERT INTO test(name) VALUES ('Tom')");
-            pstmt.execute();
+            Connection connection = DriverManager.getConnection("jdbc:mysql://61.139.65.143:46750/db01", "root", "123456");
+            System.out.println(connection);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
