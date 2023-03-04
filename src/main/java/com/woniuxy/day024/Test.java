@@ -17,7 +17,7 @@ public class Test {
         List<Good> resultList = new ArrayList<>();
 
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/day024", "root", "123456");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://18.162.120.240:3306/day024", "root", "123456");
             PreparedStatement pstmt = connection.prepareStatement("SELECT name,stock FROM goods");
             ResultSet resultSet = pstmt.executeQuery();
             while (resultSet.next()) {
