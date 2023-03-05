@@ -12,10 +12,8 @@ public class Test {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-
         Field[] f = Good.class.getDeclaredFields();
         List<Good> resultList = new ArrayList<>();
-
         try {
             Connection connection = DriverManager.getConnection("jdbc:mysql://18.162.120.240:3306/day024", "root", "123456");
             PreparedStatement pstmt = connection.prepareStatement("SELECT name,stock FROM goods");
@@ -28,15 +26,12 @@ public class Test {
                 }
                 resultList.add(good);
             }
-
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } catch (IllegalAccessException e) {
             throw new RuntimeException(e);
         }
-
         resultList.forEach(System.out::println);
-
     }
 }
 
